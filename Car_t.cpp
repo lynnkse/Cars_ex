@@ -41,11 +41,8 @@ void Car_t::SetName(Name_t _name)
 
 void Car_t::operator=(const Car_t& _car)
 {
-	if(m_name == _car.m_name)
-	{	
-		m_capacity = _car.m_capacity;
-		m_type = _car.m_type;
-	}
+	m_capacity = _car.m_capacity;
+	m_type = _car.m_type;
 }
 
 void Car_t::IncrementID()
