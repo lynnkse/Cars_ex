@@ -11,6 +11,7 @@ class Bus_t : public Car_t
 		Bus_t(const Bus_t& _bus);
 		~Bus_t();
 		
+		void operator=(const Bus_t& _bus);
 		int GetLine() const;
 		void SetLine(int _line);
 		int GetNumOfSeats() const;

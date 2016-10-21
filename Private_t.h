@@ -11,6 +11,7 @@ class Private_t : public Car_t
 		Private_t(const Private_t& _private);
 		~Private_t();
 		
+		void operator=(const Private_t& _private);	
 		int GetSpeed() const;
 		void Accelerate();
 		void Break();

@@ -1,16 +1,17 @@
 #ifndef __CAR_H__
 #define __CAR_H__
 
-enum Name_t {NOT_YET_SET = 0, BUS = 1, PRIVATE = 2};
-enum Type_t {NOT_SET = 0, AUTOMATIC = 1, STANDARD = 2};
+enum Name_t {NOT_YET_SET, BUS, PRIVATE};
+enum Type_t {NOT_SET, AUTOMATIC, STANDARD};
 
 class Car_t
 {
 	public:
 		bool operator<(const Car_t& _car) const;
-		bool compare(const Car_t& _car) const;
+		bool Compare(const Car_t& _car) const;
 		Name_t GetName() const;
 		Type_t GetType() const;
+		int GetCapacity() const;
 	protected:
 		Car_t();
 		Car_t(int _capacity);
