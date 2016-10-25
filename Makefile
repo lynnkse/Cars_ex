@@ -3,6 +3,8 @@ CFLAGS = -g -c -ansi -pedantic -Werror -Wall
 
 OBJS = Car_t.o Bus_t.o Private_t.o cars_test.o
 
+.PHONY : clean rebuild
+
 cars_test : $(OBJS) 
 	$(CC) -o cars_test $(OBJS)
 	
@@ -17,3 +19,9 @@ Bus_t.o : Bus_t.cpp Bus_t.h Car_t.h
 	
 Private_t.o : Private_t.cpp Private_t.h Car_t.h
 	$(CC) $(CFLAGS) Private_t.cpp
+	
+clean :
+	rm -f *.o
+	rm -f cars_test
+	
+rebuild : clean cars_test

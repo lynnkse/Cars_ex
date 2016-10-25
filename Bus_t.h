@@ -6,12 +6,11 @@
 class Bus_t : public Car_t
 {
 	public:
-		Bus_t();
-		Bus_t(Type_t _type, int _capacity, int _numOfSeats);
-		Bus_t(const Bus_t& _bus);
+		Bus_t(); //creates bus with all default values
+		Bus_t(Type_t _type, int _capacity, int _numOfSeats); //creates bus with given gear type, capacity and numOfSeats
+		Bus_t(const Bus_t& _bus); //copy constructor
 		~Bus_t();
 		
-		void operator=(const Bus_t& _bus);
 		int GetLine() const;
 		void SetLine(int _line);
 		int GetNumOfSeats() const;

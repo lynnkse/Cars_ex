@@ -40,10 +40,7 @@ void Car_t::SetName(Name_t _name)
 }
 
 void Car_t::operator=(const Car_t& _car)
-{
-	m_capacity = _car.m_capacity;
-	m_type = _car.m_type;
-}
+{}
 
 void Car_t::IncrementID()
 {
@@ -55,7 +52,7 @@ int Car_t::GetCapacity() const
 	return m_capacity;
 }
 
-Type_t Car_t::GetType() const
+Car_t::Type_t Car_t::GetType() const
 {
 	return m_type;
 }
@@ -68,6 +65,11 @@ bool Car_t::operator<(const Car_t& _car) const
 bool Car_t::Compare(const Car_t& _car) const
 {
 	return m_name == _car.m_name;
+}
+
+Car_t::Name_t Car_t::GetName() const
+{
+	return m_name;
 }
 
 

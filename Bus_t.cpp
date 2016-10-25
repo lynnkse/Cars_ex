@@ -45,14 +45,6 @@ void Bus_t::SetNumOfSeats(int _numOfSeats)
 	m_numOfSeats = _numOfSeats;
 }
 
-void Bus_t::operator=(const Bus_t& _bus)
-{
-	Car_t::operator=(_bus);
-	m_numOfSeats = _bus.GetNumOfSeats();
-	m_line = _bus.GetLine();
-}
-
-
 
 
 

@@ -41,12 +41,6 @@ void Private_t::Break()
 	m_speed = (m_speed > DECELERATION ? m_speed - DECELERATION : 0);
 }
 
-void Private_t::operator=(const Private_t& _private)
-{
-	Car_t::operator=(_private);
-	m_speed = _private.GetSpeed();
-}
-
 
 
 

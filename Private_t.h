@@ -6,15 +6,14 @@
 class Private_t : public Car_t
 {
 	public:
-		Private_t();
-		Private_t(Type_t _type, int _capacity);
-		Private_t(const Private_t& _private);
+		Private_t(); //creates car with all default values
+		Private_t(Type_t _type, int _capacity); //creates car with given gear type and capacity
+		Private_t(const Private_t& _private); //copy constructor
 		~Private_t();
 		
-		void operator=(const Private_t& _private);	
 		int GetSpeed() const;
-		void Accelerate();
-		void Break();
+		void Accelerate(); //increases speed by 10 kph
+		void Break(); //decreases speed by 10 kph
 	private:
 		int m_speed;
 };
